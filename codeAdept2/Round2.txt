@@ -1,0 +1,452 @@
+Q1 Give the output of the code.
+ 
+class Test extends Exception { }    I
+  
+class Main {
+   public static void main(String args[]) { 
+      try {
+         throw new Test();
+      }
+      catch(Test t) {
+         System.out.println("Got the Test Exception");
+      }
+      finally {
+         System.out.println("Inside finally block ");
+      }
+  }
+}
+
+A. Got the Test Exception inside finally block. ans
+B. Got the Test Exception.
+C. Inside finally block.
+D. Compiler error. 
+
+Q2. Give the output of the following code
+
+  #include<stdio.h>     F
+int main()  
+{  
+   int a;  
+   char *x;  
+   x = (char *) &a;  
+   a = 512;  
+   x[0] = 1;  
+   x[1] = 2;  
+   printf("%d\n",a);    
+   return 0;  
+} 
+
+(A) Machine dependent
+(B) 513  ans
+(C) 258
+(D) Compiler Error
+
+Q3. How do you insert a comment in a CSS file?  I
+
+A./* this is a comment /* 
+B./* this is a comment */ ans
+C.// this is a comment
+D.<!–– this is a comment ––>
+
+Q4.Which of the tag is used to creates a number list? E
+
+A.	
+<LI>
+B.	
+<OL>
+C.	
+<LI> and <OL>
+D.	
+None of these
+
+Q5. Give the output of the following code  I
+
+ class Test1 { 
+    int x = 10; 
+public
+    static void main(String[] args) 
+    { 
+        System.out.println(Test1.x); 
+    } 
+    static
+    { 
+        int x = 20; 
+        System.out.print(x + " "); 
+    } 
+} 
+
+A)10 10
+B) 20 20
+C) 20 10
+D) Error
+
+Q6. Final keyword in java is used with
+
+A.class
+B.class fields
+C.class methods
+D.All of the above
+
+Q7. 
+
+import java.util.*;
+public class Scan            F
+{
+ public static void main(String[] args) {
+ String in = "1 a 10 . 100 1000";
+ Scanner s = new Scanner(in);
+ int av = 0;
+ for (int x = 0; x < 4; x++) {
+ av += s.nextInt();
+ }
+ System.out.println(av);
+ }
+}
+What is the result?
+A) 11
+B) 111
+C) 1111
+D) An exception is thrown at runtime.  ans   (INPUTMISMATCHException of Scanner Class)
+
+Q8.
+
+public class Bees {                         F
+ public static void main(String[] args) {
+ try {
+ new Bees().go();
+ } catch (Exception e) {
+ System.out.println("thrown to main");
+ }
+ }
+ synchronized void go() throws InterruptedException {
+ Thread t1 = new Thread();
+ t1.start();
+ System.out.print("1 ");
+ t1.wait(5000);
+ System.out.print("2 ");
+ }
+}
+What is the result?
+A) The program prints 1 then 2 after 5 seconds
+B) The program prints: 1 thrown to main         ans
+C) The program prints: 1 2 thrown to main
+D) The program prints:1 then t1 waits for its notification.
+
+Q9. 
+
+  #include<stdio.h>                     I
+  int main()
+  {
+	char *ptr = "2braces.com";
+	printf("%c\n",*&*ptr);
+	return 0;
+  }
+ What is the output of the result
+
+A. Address of 2
+B. Compilation Error 
+C. 2         ans
+D. Run time error
+
+Q10.
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+	char a = 30, b = 5;
+	char *p = &a, *q = &b;
+	printf("%d", p - q);
+	return 0;
+}
+
+What is the output of the result
+
+A. 1
+B. Run time error
+C. Compilation Error
+D. 25
+
+Q11.
+ 
+class A {                                     I
+    final public void show() {
+       System.out.println("A::show() called");
+    }
+}
+  
+class B extends A {
+    public void show() {
+       System.out.println("B::show() called");
+    }
+}
+  
+class Main {
+    public static void main(String[] args) {
+        A a = new B();;
+        a.show();
+    }
+}
+
+(A) A::show() called
+(B) B::show() called
+(C) Compiler Error     ans
+(D) Runtime Error
+
+Q12. Which of the following is true about inheritance in Java?   I
+
+1) Private methods are final.
+2) Protected members are accessible within a package and 
+   inherited classes outside the package.
+3) Protected methods are final.
+4) We cannot override private methods. 
+
+
+(A) 1, 2 and 4       ans
+(B) Only 1 and 2
+(C) 1, 2 and 3
+(D) 2, 3 and 4
+
+
+Q13. Give the output of the result.     
+
+public class Test                        E
+{ 
+    public static void main(String[] args) 
+    { 
+        double data = 444.324; 
+        int value = data; 
+        System.out.println(data); 
+    } 
+}
+
+a) 444.324
+b) 444
+c) Runtime error
+d) Compilation error       ans
+
+Q14.Which of the following is true about interfaces in java.   I
+
+  1) An interface can contain following type of members.
+  ....public, static, final fields (i.e., constants) 
+  ....default and static methods with bodies
+
+  2) An instance of interface can be created.
+
+  3) A class can implement multiple interfaces.
+
+  4) Many classes can implement the same interface.
+
+A) 1, 3 and 4      ans
+B) 1, 2 and 4
+C) 2, 3 and 4
+D) 1, 2, 3 and 4
+
+Q15.Which of the following is not a stable sorting algorithm in its typical implementation.  E
+
+A Insertion Sort
+B Merge Sort
+C Quick Sort    ans
+D Bubble Sort
+
+Q16.Complexity of linear search algorithm is ………        E
+
+A. O(n)         ans
+B. O(logn)
+C. O(n2)
+D. O(n logn)
+
+Q17.How many private member functions are allowed in a class?     E
+
+A. Only 1
+B. Only 7
+C. Only 255
+D. As many as required     ans
+
+Q18.
+
+class Helper 
+{ 
+    private int data; 
+    private Helper() 
+    { 
+        data = 5; 
+    } 
+} 
+public class Test                     I
+{ 
+    public static void main(String[] args) 
+    { 
+        Helper help = new Helper(); 
+        System.out.println(help.data); 
+    } 
+} 
+
+a) Compilation error      ans
+b) 5
+c) Runtime error
+d) None of these     
+
+Q19.Which of the following is true about this pointer?      E
+
+(A) It is passed as a hidden argument to all function calls
+(B) It is passed as a hidden argument to all non-static function calls     ans
+(C) It is passed as a hidden argument to all static functions
+(D) None of the above
+
+Q20. What is C tokens?                   E
+
+A. The smallest individual units of c program
+B. The basic element reconized by the complier
+C. The largest individual units of program
+D. A & B both                               ans
+  
+Q21. Which statement is not true in java language?      E
+
+(a) A public member of a class can be accessed in all the packages.
+(b) A private member of a class cannot be accessed by the methods of the same class.   ans
+(c) A private member of a class cannot be accessed from its derived class.
+(d) A protected member of a class can be accessed from its derived class.
+
+Q22.  What is the Output of the following code
+
+ class Test                                         F
+{ 
+    boolean[] array = new boolean[3]; 
+    int count = 0; 
+  
+    void set(boolean[] arr, int x) 
+    { 
+        arr[x] = true; 
+        count++; 
+    } 
+  
+    void func() 
+    { 
+        if(array[0] && array[++count - 2] | array [count - 1]) 
+            count++; 
+  
+        System.out.println("count = " + count); 
+    } 
+  
+  
+    public static void main(String[] args) 
+    { 
+        Test object = new Test(); 
+        object.set(object.array, 0); 
+        object.set(object.array, 1); 
+        object.func(); 
+    } 
+} 
+
+(A) 2
+(B) 3
+(C) 4     ans
+(D) 5
+
+Q23. ……………. binding means that, an object is bound to its function call at compile time.  E
+
+A) late
+B) static       ans
+C) dynamic
+D) fixed
+
+Q24. What is the output of the following code.  
+
+#include <iostream>                       I
+using namespace std;
+
+class Base
+{
+  public:
+	void f()
+  {
+	  cout << "Base\n";
+	}
+};
+
+class Derived : public Base
+{
+  public:
+	void f()
+  {
+	  cout<<"Derived\n";
+	}
+};
+
+int main()
+{
+  Derived obj;
+  obj.Base::f();
+  return 0;
+}
+
+A. Derived
+B. Runtime Error 
+C. Compilation  Error
+D. Base                       ans
+
+
+Q25 The meta tag in html is used for...      E
+
+A. Stores the data for sending to client.
+B. Stores the data of our web page.
+C. Stores the head description.
+D. Helps the search engine for listing on search.  ans 
+
+Q26.What is the output of the code.    I
+
+ #include <stdio.h>
+int main()
+{
+    if (sizeof(int) > -1)
+        printf("Yes");
+    else
+        printf("No");
+    return 0;
+}
+ A. Compiler Error
+ B. No                  ans
+ C. Runtime Error
+ D. Yes
+
+Q27. sizeof() is             E
+
+A. function 
+B. Operator      ans
+C. Operand 
+D. Data type
+
+Q28.What would be output of this block of code ?    I  
+  
+  int a=5;
+  int *p1=&a;
+  int **p2=&p1;
+  int ***p3=&p2;
+  cout<<***p3<<" "<<*p2<<" "<<p1;
+  A. 5 &a &p1
+  B. 5 &p1 &a
+  C. &p1 5 &a
+  D. 5 &a &a               ans
+
+Q29. Predict the output of following C++ program     I
+
+#include<iostream>
+using namespace std;
+class Empty {};
+int main()
+{
+  cout << sizeof(Empty);
+  return 0;
+}
+	
+A. a non-zero value         ans
+B. 0
+C. Compiler Error
+D. Runtime Error
+
+Q.30 Which of the following statement is correct?
+
+ A. Overloaded functions can have at most one default argument.
+ B. An overloaded function cannot have default argument.
+ C. All arguments of an overloaded function can be default.       ans
+ D. A function if overloaded more than once cannot have default argument.
